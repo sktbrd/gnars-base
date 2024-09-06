@@ -60,11 +60,11 @@ export default function Create() {
 
           <Formik
             initialValues={{ title: "", transactions: [], summary: "" }}
-            onSubmit={() => {}}
+            onSubmit={() => { }}
             render={({ values }) => (
               <Form className="mt-6 flex flex-col w-full">
                 <label className="relative text-md font-heading text-skin-base">
-                  Proposal title
+                  Título da Proposta
                 </label>
 
                 <Field
@@ -188,11 +188,10 @@ const SubmitButton = () => {
 
   const hasBalance = userVotes && userVotes >= (currentThreshold || 0);
 
-  const buttonClass = `${
-    write
+  const buttonClass = `${write
       ? "bg-skin-button-accent hover:bg-skin-button-accent-hover"
       : "bg-skin-button-muted"
-  } text-skin-inverted rounded-lg text-md w-full h-12 mt-4 flex items-center justify-around`;
+    } text-skin-inverted rounded-lg text-md w-full h-12 mt-4 flex items-center justify-around`;
 
   return (
     <AuthWrapper className={buttonClass}>
